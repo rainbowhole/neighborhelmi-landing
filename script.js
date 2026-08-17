@@ -7,9 +7,11 @@ const faq = document.querySelector("[data-faq]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 
+const vercelContactEndpoint =
+  "https://todough-landing-ohs47yxcj-piyoticon-6180s-projects.vercel.app/api/contact";
 const contactEndpoint =
   window.TODOUGH_CONTACT_ENDPOINT ||
-  (window.location.hostname.endsWith(".vercel.app") ? "/api/contact" : "");
+  (window.location.hostname.endsWith(".vercel.app") ? "/api/contact" : vercelContactEndpoint);
 
 function setActiveRoute(route) {
   pages.forEach((page) => {
