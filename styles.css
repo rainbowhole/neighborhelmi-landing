@@ -252,11 +252,12 @@ textarea {
 
 .wavy-divider {
   background-image: url("./assets/divider-line.svg");
-  background-position: center;
+  background-position: left center;
   background-repeat: no-repeat;
-  background-size: 100% 10px;
-  height: 10px;
-  width: 100%;
+  background-size: 100vw 6px;
+  height: 6px;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
 }
 
 .faq-section {
