@@ -254,7 +254,7 @@ textarea {
   background-image: url("./assets/divider-line.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: max(2234px, 100%) 10px;
+  background-size: 100% 10px;
   height: 10px;
   width: 100%;
 }
