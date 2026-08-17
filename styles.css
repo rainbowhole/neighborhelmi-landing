@@ -16,6 +16,7 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -252,9 +253,9 @@ textarea {
 
 .wavy-divider {
   background-image: url("./assets/divider-line.svg");
-  background-position: left center;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100vw 6px;
+  background-size: 100% 6px;
   height: 6px;
   margin-left: calc(50% - 50vw);
   width: 100vw;
