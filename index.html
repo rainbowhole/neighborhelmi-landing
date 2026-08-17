@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,125 +7,396 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Short+Stack&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Inter:wght@400;500;600;700;800&family=Short+Stack&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#home" aria-label="todough home">TODOUGH</a>
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a class="is-active" href="#home">Home</a>
-        <a href="#services">About Us</a>
-        <a class="contact-button" href="#contact">Contact</a>
-        <button class="icon-button" type="button" aria-label="Open menu">
-          <img src="./assets/menu.svg" alt="" />
-        </button>
-      </nav>
+      <div class="header-inner">
+        <a class="brand" href="#home" data-route="home" aria-label="todough home">TODOUGH</a>
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a class="nav-link is-active" href="#home" data-route="home">Home</a>
+          <a class="nav-link" href="#faq" data-route="home" data-scroll-target="faq">FAQ</a>
+          <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+            <img src="./assets/menu.svg" alt="" />
+          </button>
+          <div class="menu-popover" data-menu>
+            <a href="#contact" data-route="contact">Contact</a>
+            <a href="#privacy" data-route="privacy">Privacy policy</a>
+            <a href="#terms" data-route="terms">Terms of Service</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
-    <main id="home">
-      <section class="hero-section" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title">가장 심플하고<br />가장 귀여운 투두앱!</h1>
-          <p>할 일을 끝내서 배고픈 고양이에게<br />맛있는 빵을 구워주세요!!</p>
-          <div class="store-actions" aria-label="Download links">
-            <a class="store-button" href="#" aria-label="Download on the App Store">
-              <img src="./assets/app-store-icon.png" alt="" />
-              <span>App store</span>
-            </a>
-            <a class="store-button" href="#" aria-label="Get it on Play Store">
-              <img src="./assets/play-store-icon.svg" alt="" />
-              <span>Play store</span>
-            </a>
+    <main>
+      <section class="page-view is-visible" id="page-home" data-page="home">
+        <section class="hero-section" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <h1 id="hero-title">The Simplest &amp; Cutest<br />To-Do App Ever!</h1>
+            <p>Complete tasks &amp; bake delicious bread<br />for hungry cats!</p>
+            <div class="store-actions" aria-label="Download and social links">
+              <a class="store-button" href="#" aria-label="Download on the App Store">
+                <img src="./assets/app-store-icon.png" alt="" />
+                <span>App store</span>
+              </a>
+              <a class="store-button" href="#" aria-label="Get it on Play Store">
+                <img src="./assets/play-store-icon.svg" alt="" />
+                <span>Play store</span>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="hero-art" aria-label="todough cat characters">
-          <img class="check-mark" src="./assets/check.svg" alt="" />
-          <div class="cat-group">
-            <img class="cat cat-left" src="./assets/cat-off-2.png" alt="" />
-            <img class="cat cat-back" src="./assets/cat-off-1.png" alt="" />
-            <img class="cat cat-front" src="./assets/cat-on.png" alt="" />
-            <img class="bread" src="./assets/bite-bread.png" alt="" />
+          <div class="hero-art" aria-label="todough cat characters">
+            <img class="check-mark" src="./assets/check.svg" alt="" />
+            <div class="cat-group">
+              <img class="cat cat-left" src="./assets/cat-off-2.png" alt="" />
+              <img class="cat cat-back" src="./assets/cat-off-1.png" alt="" />
+              <img class="cat cat-front" src="./assets/cat-on.png" alt="" />
+              <img class="bread" src="./assets/bite-bread.png" alt="" />
+            </div>
           </div>
-        </div>
+        </section>
+
+        <div class="wavy-divider" aria-hidden="true"></div>
+
+        <section class="faq-section" id="faq" aria-labelledby="faq-title">
+          <div class="section-grid">
+            <p class="section-kicker" id="faq-title">FAQ</p>
+            <div class="faq-list" data-faq>
+              <h2 class="faq-heading">Frequently Asked Questions</h2>
+              <article class="faq-item is-open">
+                <button class="faq-trigger" type="button" aria-expanded="true">
+                  <span>Q1. What is TODOUGH?</span>
+                  <img src="./assets/chevron-up.svg" alt="" />
+                </button>
+                <div class="faq-panel">
+                  <p>
+                    TODOUGH is a cute to-do app where completing tasks lets you bake bread
+                    and care for hungry cats. Organize your goals, stay focused with a timer,
+                    review completed tasks, and record your daily progress and notes-all in
+                    one place.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span>Q2. Can I use TODOUGH for free?</span>
+                  <img src="./assets/chevron-up.svg" alt="" />
+                </button>
+                <div class="faq-panel">
+                  <p>
+                    Yes. Core features, including basic task management and the focus timer,
+                    are available for free. Some features and the number of goals you can
+                    create are limited in the free version.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span>Q3. What features are included with Premium?</span>
+                  <img src="./assets/chevron-up.svg" alt="" />
+                </button>
+                <div class="faq-panel">
+                  <p>Premium includes:</p>
+                  <ul>
+                    <li>Unlimited goals</li>
+                    <li>Home screen widgets</li>
+                    <li>Five progress check options</li>
+                    <li>Daily notes</li>
+                    <li>Data backup and import</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span>Q4. Is Premium a subscription?</span>
+                  <img src="./assets/chevron-up.svg" alt="" />
+                </button>
+                <div class="faq-panel">
+                  <p>
+                    No. Premium is a one-time purchase with no subscription or recurring
+                    charges. Once purchased, you can continue using the Premium features
+                    without any additional payments.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span>Q5. Can I restore Premium and transfer my data to a new device?</span>
+                  <img src="./assets/chevron-up.svg" alt="" />
+                </button>
+                <div class="faq-panel">
+                  <p>
+                    Yes. If you use the same Apple ID or Google account used for the original
+                    purchase, you can restore Premium using the "Restore Purchases" option.
+                  </p>
+                  <p>
+                    Your tasks, notes, and other app data must be transferred separately using
+                    the Premium backup feature. On your old device, open the menu and select
+                    "Backup." Save or share the backup file using email, AirDrop, or cloud
+                    storage. On your new device, install TODOUGH, select "Import" from the
+                    menu, and open the saved backup file.
+                  </p>
+                  <p>
+                    Restoring your purchase does not automatically transfer your tasks or
+                    notes. Please create and save a backup before switching devices.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span>Q6. How can I contact you if I have a problem?</span>
+                  <img src="./assets/chevron-up.svg" alt="" />
+                </button>
+                <div class="faq-panel">
+                  <p>
+                    Use "Contact" in the app menu or email us at
+                    <a href="mailto:piyoticon@gmail.com">piyoticon@gmail.com</a>. We'll get
+                    back to you as soon as possible.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       </section>
 
-      <div class="wavy-divider" aria-hidden="true"></div>
-
-      <section class="services-section" id="services" aria-labelledby="services-title">
-        <p class="section-kicker" id="services-title">Our Services</p>
-        <div class="accordion" data-accordion>
-          <article class="service-item is-open">
-            <button class="service-trigger" type="button" aria-expanded="true">
-              <span>Visual Branding</span>
-              <img src="./assets/chevron-up.svg" alt="" />
-            </button>
-            <div class="service-panel">
-              <p>
-                Your brand is more than just a logo; it's the essence of your business.
-                We create compelling brand identities that tell your unique story and
-                resonate with your target audience.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-item">
-            <button class="service-trigger" type="button" aria-expanded="false">
-              <span>Creative Campaign</span>
-              <img src="./assets/chevron-up.svg" alt="" />
-            </button>
-            <div class="service-panel">
-              <p>
-                Memorable campaign concepts with crisp messaging, launch visuals, and
-                playful moments that make TODOUGH easy to share.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-item">
-            <button class="service-trigger" type="button" aria-expanded="false">
-              <span>UI/UX Design</span>
-              <img src="./assets/chevron-up.svg" alt="" />
-            </button>
-            <div class="service-panel">
-              <p>
-                Simple task flows, friendly app screens, and interaction details that keep
-                planning calm without losing the charm.
-              </p>
-            </div>
-          </article>
-
-          <article class="service-item">
-            <button class="service-trigger" type="button" aria-expanded="false">
-              <span>Development</span>
-              <img src="./assets/chevron-up.svg" alt="" />
-            </button>
-            <div class="service-panel">
-              <p>
-                Responsive front-end builds, performance-minded implementation, and clean
-                handoff-ready code for product launches.
-              </p>
-            </div>
-          </article>
-        </div>
+      <section class="page-view" id="page-contact" data-page="contact">
+        <div class="wavy-divider" aria-hidden="true"></div>
+        <section class="form-section" aria-labelledby="contact-title">
+          <div class="content-shell">
+            <h1 id="contact-title">Contact</h1>
+            <form class="contact-form" data-contact-form>
+              <div class="form-row">
+                <label>
+                  <span>Name</span>
+                  <input name="name" type="text" placeholder="Your name *" required />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input name="email" type="email" placeholder="Email address *" required />
+                </label>
+              </div>
+              <label>
+                <span>Message</span>
+                <textarea
+                  name="message"
+                  placeholder="Tell me what's on your mind"
+                  maxlength="500"
+                  required
+                ></textarea>
+              </label>
+              <button class="secondary-button" type="submit">Submit</button>
+              <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+            </form>
+          </div>
+        </section>
       </section>
 
-      <div class="wavy-divider" aria-hidden="true"></div>
+      <section class="page-view" id="page-privacy" data-page="privacy">
+        <div class="wavy-divider" aria-hidden="true"></div>
+        <section class="document-section" aria-labelledby="privacy-title">
+          <article class="document-copy">
+            <h1 id="privacy-title">Privacy Policy</h1>
+            <p>Privacy Policy</p>
+            <p>Effective Date: August 10, 2026</p>
+            <p>
+              This Privacy Policy applies to the ToDough mobile application provided by
+              piyoticon ("Service Provider").
+            </p>
+            <p>ToDough is designed to let you use the app without creating an account.</p>
+            <h2>Information We Collect</h2>
+            <p>
+              ToDough does not require users to create an account or directly provide
+              personally identifiable information to use the core features of the app.
+            </p>
+            <p>
+              Your goals, task history, baked notes, reminders, backup settings, language
+              preference, and other app preferences are stored locally on your device unless
+              otherwise stated within the application.
+            </p>
+            <p>
+              If you contact the Service Provider through the Contact screen, the message you
+              write, your optional email address, reply preference, locale, platform, and send
+              time may be transmitted so the Service Provider can read and respond to your
+              request.
+            </p>
+            <p>
+              The application and its third-party service providers may automatically process
+              limited technical information needed to provide app functionality, such as device
+              and operating-system information, app version, purchase status, diagnostic
+              information, and crash information.
+            </p>
+            <p>ToDough does not sell your personal information.</p>
+            <h2>Purchases</h2>
+            <p>
+              Premium access is processed as an in-app purchase through the Apple App Store or
+              Google Play Store.
+            </p>
+            <p>
+              RevenueCat is used to verify purchases, manage premium entitlement status, and
+              restore eligible purchases. ToDough does not directly collect or store your
+              payment-card information.
+            </p>
+            <h2>Backup and Restore</h2>
+            <p>
+              If you use the backup feature, ToDough creates a backup file that may include
+              your locally stored goals, completion history, repeat schedules, reminders, baked
+              notes, and app preferences.
+            </p>
+            <p>
+              You choose where to save or share that backup file. Any external app or storage
+              service you choose to use handles that file according to its own terms and
+              privacy policy.
+            </p>
+            <p>
+              Importing a backup replaces the current local records on the device with the
+              records from the selected backup file.
+            </p>
+            <h2>Third-Party Services</h2>
+            <p>
+              The application may use the following third-party services, each of which
+              processes information according to its own privacy policy:
+            </p>
+            <ul>
+              <li>Apple App Store</li>
+              <li>Google Play Services</li>
+              <li>RevenueCat</li>
+              <li>Expo</li>
+            </ul>
+            <h2>Data Storage and Deletion</h2>
+            <p>
+              Information stored locally can be removed by deleting the relevant data within
+              the application or uninstalling the application.
+            </p>
+            <p>
+              Backup files exported by you are stored wherever you choose to save or share them
+              and must be deleted from those locations separately.
+            </p>
+            <p>
+              Some purchase, contact, diagnostic, and technical information may be retained by
+              third-party providers or the Service Provider according to their own policies,
+              operational needs, and legal obligations.
+            </p>
+            <p>
+              To request information about or deletion of personal data held directly by the
+              Service Provider, contact
+              <a href="mailto:piyoticon@gmail.com">piyoticon@gmail.com</a>.
+            </p>
+            <h2>Children's Privacy</h2>
+            <p>
+              ToDough is not directed to children under 13, and the Service Provider does not
+              knowingly collect personal information from children under 13.
+            </p>
+            <p>
+              If you believe that a child has provided personal information, please contact
+              <a href="mailto:piyoticon@gmail.com">piyoticon@gmail.com</a>.
+            </p>
+            <h2>Security</h2>
+            <p>
+              The Service Provider takes reasonable measures to protect information processed
+              through the application. However, no electronic storage or transmission method is
+              completely secure.
+            </p>
+            <h2>Changes to This Policy</h2>
+            <p>
+              This Privacy Policy may be updated from time to time. Any updates will be posted
+              on this page with a revised effective date.
+            </p>
+            <h2>Contact Us</h2>
+            <p>
+              If you have any questions about this Privacy Policy, please contact us at
+              <a href="mailto:piyoticon@gmail.com">piyoticon@gmail.com</a>.
+            </p>
+          </article>
+        </section>
+      </section>
 
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <p class="section-kicker" id="contact-title">Contact</p>
-        <div class="contact-copy">
-          <h2>
-            Ready to turn your ideas into exceptional designs? Contact us today, and
-            let's make something amazing together!
-          </h2>
-          <a class="secondary-button" href="mailto:hello@todough.app">Contact</a>
-        </div>
+      <section class="page-view" id="page-terms" data-page="terms">
+        <div class="wavy-divider" aria-hidden="true"></div>
+        <section class="document-section" aria-labelledby="terms-title">
+          <article class="document-copy">
+            <h1 id="terms-title">Terms of Service</h1>
+            <p>Effective Date: August 10, 2026</p>
+            <p>
+              These Terms of Service apply to the ToDough mobile application provided by
+              piyoticon ("Service Provider").
+            </p>
+            <p>
+              By downloading or using ToDough, you agree to these Terms. If you do not agree,
+              please do not use the application.
+            </p>
+            <h2>Use of the Application</h2>
+            <p>
+              ToDough is provided for personal use. You may not copy, modify, distribute,
+              reverse engineer, or attempt to extract the application's source code.
+            </p>
+            <p>
+              All rights related to the application, including its design, code, characters,
+              logos, and branding, belong to the Service Provider.
+            </p>
+            <h2>Premium Purchase</h2>
+            <p>
+              Some features may require a one-time in-app purchase. Prices and payment
+              conditions will be clearly displayed before purchase.
+            </p>
+            <p>
+              Payments, cancellations, and refunds are processed according to the policies of
+              the Apple App Store or Google Play Store.
+            </p>
+            <p>
+              Eligible purchases can be restored using the Restore Purchases option within the
+              application.
+            </p>
+            <h2>Data and Privacy</h2>
+            <p>
+              ToDough may store and process information necessary to provide its features.
+              Please review the Privacy Policy for more information about how data is handled.
+            </p>
+            <p>
+              You are responsible for maintaining the security of your device and any backup
+              files you export.
+            </p>
+            <p>
+              The Service Provider is not responsible for data loss caused by device damage,
+              application deletion, backup file deletion, unauthorized access, or circumstances
+              outside its reasonable control.
+            </p>
+            <h2>Backup and Restore</h2>
+            <p>The backup feature is provided to help you export and restore ToDough records.</p>
+            <p>
+              Importing a backup replaces the current local records on the device with the data
+              contained in the selected backup file.
+            </p>
+            <h2>Contact Us</h2>
+            <p>
+              If you have any questions about these Terms, please contact us at
+              <a href="mailto:piyoticon@gmail.com">piyoticon@gmail.com</a>.
+            </p>
+          </article>
+        </section>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>Piyoticon</p>
+        <p>Copyright © 2026 - All rights reserved.</p>
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="Twitter"><img src="./assets/twitter.svg" alt="" /></a>
+          <a href="#" aria-label="LinkedIn"><img src="./assets/linkedin.svg" alt="" /></a>
+          <a href="#" aria-label="Facebook"><img src="./assets/facebook.svg" alt="" /></a>
+        </div>
+      </div>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
