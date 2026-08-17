@@ -15,7 +15,8 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -257,8 +258,8 @@ textarea {
   background-repeat: no-repeat;
   background-size: 100% 6px;
   height: 6px;
-  margin-left: calc(50% - 50vw);
-  width: 100vw;
+  margin-left: 0;
+  width: 100%;
 }
 
 .faq-section {
@@ -314,9 +315,9 @@ textarea {
 .faq-trigger img {
   display: block;
   flex: 0 0 auto;
-  height: 41px;
+  height: 32px;
   transition: transform 180ms ease;
-  width: 41px;
+  width: 32px;
 }
 
 .faq-item:not(.is-open) .faq-trigger img {
