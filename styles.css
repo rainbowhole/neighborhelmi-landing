@@ -22,7 +22,7 @@ html {
 body {
   background: var(--white);
   color: var(--ink);
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   margin: 0;
 }
 
@@ -56,7 +56,7 @@ textarea {
 
 .brand {
   color: var(--accent-text);
-  font-family: "Short Stack", Inter, sans-serif;
+  font-family: "Short Stack", Poppins, sans-serif;
   font-size: 32px;
   line-height: 1;
   white-space: nowrap;
@@ -150,17 +150,17 @@ textarea {
 
 .hero-copy h1 {
   color: var(--ink);
-  font-size: clamp(48px, 4.05vw, 70px);
-  font-weight: 800;
-  line-height: 1.14;
+  font-size: clamp(44px, 3.47vw, 60px);
+  font-weight: 700;
+  line-height: 1.33;
   margin: 0;
 }
 
 .hero-copy p {
   color: rgba(31, 31, 57, 0.7);
-  font-size: clamp(20px, 1.62vw, 28px);
-  font-weight: 700;
-  line-height: 1.72;
+  font-size: clamp(18px, 1.39vw, 24px);
+  font-weight: 600;
+  line-height: 2;
   margin: 25px 0 50px;
 }
 
@@ -251,11 +251,11 @@ textarea {
 }
 
 .wavy-divider {
-  background-image: url("./assets/divider-wavy.svg");
+  background-image: url("./assets/divider-line.svg");
   background-position: center;
-  background-repeat: repeat-x;
-  background-size: auto 6px;
-  height: 6px;
+  background-repeat: no-repeat;
+  background-size: max(2234px, 100%) 10px;
+  height: 10px;
   width: 100%;
 }
 
@@ -274,21 +274,13 @@ textarea {
 
 .section-kicker {
   color: #000;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.25;
   margin: 20px 0 0;
 }
 
 .faq-list {
   width: 100%;
-}
-
-.faq-heading {
-  color: #000;
-  font-size: clamp(30px, 2.31vw, 40px);
-  font-weight: 500;
-  line-height: 1.5;
-  margin: 0 0 20px;
 }
 
 .faq-item {
@@ -311,7 +303,7 @@ textarea {
 
 .faq-trigger span {
   color: #000;
-  font-size: clamp(28px, 2.31vw, 40px);
+  font-size: clamp(24px, 1.85vw, 32px);
   font-weight: 500;
   line-height: 1.5;
 }
@@ -337,9 +329,9 @@ textarea {
 .faq-panel p,
 .faq-panel li {
   color: rgba(0, 0, 0, 0.7);
-  font-size: clamp(18px, 1.62vw, 28px);
+  font-size: clamp(18px, 1.39vw, 24px);
   font-weight: 400;
-  line-height: 1.72;
+  line-height: 2;
 }
 
 .faq-panel p {
@@ -417,7 +409,6 @@ textarea {
 
 .contact-form label span {
   color: #888;
-  font-family: "DM Sans", Inter, sans-serif;
   font-size: 14px;
 }
 
@@ -428,7 +419,6 @@ textarea {
   border-bottom: 2px solid #1d1d1d;
   border-radius: 0;
   color: #1d1d1d;
-  font-family: "DM Sans", Inter, sans-serif;
   font-size: 18px;
   outline: none;
   padding: 10px 0 16px;
@@ -482,9 +472,9 @@ textarea {
 .document-copy h2,
 .document-copy p,
 .document-copy li {
-  font-size: clamp(18px, 1.62vw, 28px);
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.72;
+  line-height: 2.66;
 }
 
 .document-copy h2,
@@ -602,7 +592,7 @@ textarea {
   }
 
   .hero-copy h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .store-actions,
@@ -619,7 +609,7 @@ textarea {
   }
 
   .faq-trigger span {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .site-footer {
