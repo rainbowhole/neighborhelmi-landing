@@ -1,6 +1,6 @@
-# TODOUGH Landing Page
+# todough
 
-Static landing page for TODOUGH, built from the provided Figma design.
+Static landing page for todough, built from the provided Figma design.
 
 ## Local Preview
 
