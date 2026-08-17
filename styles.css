@@ -8,6 +8,7 @@
   --border: #1c1c1c;
   --muted: #6b7280;
   --content-width: 1488px;
+  --page-padding: clamp(24px, 6.95vw, 120px);
   --shadow: 0 16px 8px rgba(12, 12, 13, 0.1), 0 4px 2px rgba(12, 12, 13, 0.05);
 }
 
@@ -24,7 +25,7 @@ body {
 body {
   background: var(--white);
   color: var(--ink);
-  font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   margin: 0;
 }
 
@@ -52,13 +53,13 @@ textarea {
   justify-content: space-between;
   margin: 0 auto;
   max-width: var(--content-width);
-  padding: 40px clamp(24px, 6.95vw, 120px);
+  padding: 40px var(--page-padding);
   width: 100%;
 }
 
 .brand {
   color: var(--accent-text);
-  font-family: "Short Stack", Poppins, sans-serif;
+  font-family: "Short Stack", Inter, sans-serif;
   font-size: 32px;
   line-height: 1;
   white-space: nowrap;
@@ -146,7 +147,7 @@ textarea {
   margin: 0 auto;
   max-width: var(--content-width);
   min-height: 688px;
-  padding: 110px clamp(24px, 6.95vw, 120px) 124px;
+  padding: 110px var(--page-padding) 124px;
   width: 100%;
 }
 
@@ -256,7 +257,7 @@ textarea {
   background-image: url("./assets/divider-line.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 6px;
+  background-size: calc(100% + 8px) 6px;
   height: 6px;
   margin-left: 0;
   width: 100%;
@@ -264,7 +265,7 @@ textarea {
 
 .faq-section {
   background: var(--pink-soft);
-  padding: 200px clamp(24px, 6.95vw, 120px);
+  padding: 200px 0;
 }
 
 .section-grid {
@@ -273,6 +274,8 @@ textarea {
   grid-template-columns: 200px minmax(0, 1fr);
   margin: 0 auto;
   max-width: var(--content-width);
+  padding: 0 var(--page-padding);
+  width: 100%;
 }
 
 .section-kicker {
@@ -355,20 +358,22 @@ textarea {
   max-height: 1100px;
 }
 
-.faq-item.is-open .faq-panel > *:last-child {
+.faq-item.is-open .faq-panel>*:last-child {
   padding-bottom: 25px;
 }
 
 .form-section,
 .document-section {
   background: var(--white);
-  padding: 180px clamp(24px, 6.95vw, 120px);
+  padding: 180px 0;
 }
 
 .content-shell,
 .document-copy {
   margin: 0 auto;
   max-width: var(--content-width);
+  padding: 0 var(--page-padding);
+  width: 100%;
 }
 
 .content-shell {
@@ -502,7 +507,7 @@ textarea {
 .site-footer {
   background: var(--pink);
   min-height: 498px;
-  padding: 160px clamp(24px, 6.95vw, 120px);
+  padding: 160px var(--page-padding);
 }
 
 .footer-inner {
