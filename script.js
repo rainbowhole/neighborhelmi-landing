@@ -19,7 +19,12 @@ function setActiveRoute(route) {
   });
 
   routeLinks.forEach((link) => {
-    link.classList.toggle("is-active", link.dataset.route === route);
+    const isActive =
+      route === "home"
+        ? link.dataset.route === route && !link.dataset.scrollTarget
+        : link.dataset.route === route;
+
+    link.classList.toggle("is-active", isActive);
   });
 
   if (menu) {
