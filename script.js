@@ -7,7 +7,9 @@ const faq = document.querySelector("[data-faq]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 
-const contactEndpoint = window.TODOUGH_CONTACT_ENDPOINT || "";
+const contactEndpoint =
+  window.TODOUGH_CONTACT_ENDPOINT ||
+  (window.location.hostname.endsWith(".vercel.app") ? "/api/contact" : "");
 
 function setActiveRoute(route) {
   pages.forEach((page) => {

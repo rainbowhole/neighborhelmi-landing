@@ -19,5 +19,12 @@ This site can be published from the repository root using GitHub Pages.
 ## Contact Form
 
 The public site should call a private contact endpoint, not the Discord webhook directly.
-Set `window.TODOUGH_CONTACT_ENDPOINT` in `script.js` after deploying the Cloudflare Worker
-from the main ToDough app's `contact-endpoint` folder.
+The Vercel serverless function in `api/contact.js` forwards contact messages to Discord.
+
+Set this Vercel environment variable before using the contact form in production:
+
+```sh
+DISCORD_WEBHOOK_URL
+```
+
+Do not commit the actual Discord webhook URL to this repository.
