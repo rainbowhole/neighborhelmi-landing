@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODOUGH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Short+Stack&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="TODOUGH home">TODOUGH</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="is-active" href="#home">Home</a>
+        <a href="#services">About Us</a>
+        <a class="contact-button" href="#contact">Contact</a>
+        <button class="icon-button" type="button" aria-label="Open menu">
+          <img src="./assets/menu.svg" alt="" />
+        </button>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">가장 심플하고<br />가장 귀여운 투두앱!</h1>
+          <p>할 일을 끝내서 배고픈 고양이에게<br />맛있는 빵을 구워주세요!!</p>
+          <div class="store-actions" aria-label="Download links">
+            <a class="store-button" href="#" aria-label="Download on the App Store">
+              <img src="./assets/app-store-icon.png" alt="" />
+              <span>App store</span>
+            </a>
+            <a class="store-button" href="#" aria-label="Get it on Play Store">
+              <img src="./assets/play-store-icon.svg" alt="" />
+              <span>Play store</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="TODOUGH cat characters">
+          <img class="check-mark" src="./assets/check.svg" alt="" />
+          <div class="cat-group">
+            <img class="cat cat-left" src="./assets/cat-off-2.png" alt="" />
+            <img class="cat cat-back" src="./assets/cat-off-1.png" alt="" />
+            <img class="cat cat-front" src="./assets/cat-on.png" alt="" />
+            <img class="bread" src="./assets/bite-bread.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <div class="wavy-divider" aria-hidden="true"></div>
+
+      <section class="services-section" id="services" aria-labelledby="services-title">
+        <p class="section-kicker" id="services-title">Our Services</p>
+        <div class="accordion" data-accordion>
+          <article class="service-item is-open">
+            <button class="service-trigger" type="button" aria-expanded="true">
+              <span>Visual Branding</span>
+              <img src="./assets/chevron-up.svg" alt="" />
+            </button>
+            <div class="service-panel">
+              <p>
+                Your brand is more than just a logo; it's the essence of your business.
+                We create compelling brand identities that tell your unique story and
+                resonate with your target audience.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <button class="service-trigger" type="button" aria-expanded="false">
+              <span>Creative Campaign</span>
+              <img src="./assets/chevron-up.svg" alt="" />
+            </button>
+            <div class="service-panel">
+              <p>
+                Memorable campaign concepts with crisp messaging, launch visuals, and
+                playful moments that make TODOUGH easy to share.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <button class="service-trigger" type="button" aria-expanded="false">
+              <span>UI/UX Design</span>
+              <img src="./assets/chevron-up.svg" alt="" />
+            </button>
+            <div class="service-panel">
+              <p>
+                Simple task flows, friendly app screens, and interaction details that keep
+                planning calm without losing the charm.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <button class="service-trigger" type="button" aria-expanded="false">
+              <span>Development</span>
+              <img src="./assets/chevron-up.svg" alt="" />
+            </button>
+            <div class="service-panel">
+              <p>
+                Responsive front-end builds, performance-minded implementation, and clean
+                handoff-ready code for product launches.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="wavy-divider" aria-hidden="true"></div>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <p class="section-kicker" id="contact-title">Contact</p>
+        <div class="contact-copy">
+          <h2>
+            Ready to turn your ideas into exceptional designs? Contact us today, and
+            let's make something amazing together!
+          </h2>
+          <a class="secondary-button" href="mailto:hello@todough.app">Contact</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

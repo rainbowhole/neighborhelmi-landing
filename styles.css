@@ -1,0 +1,399 @@
+:root {
+  --cream: #fffaee;
+  --pink-soft: #fae8ea;
+  --pink: #ff9aa5;
+  --accent: #ff7878;
+  --accent-text: #ff7575;
+  --ink: #1f1f39;
+  --border: #1c1c1c;
+  --muted: #6b7280;
+  --content-width: 1488px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+.site-header {
+  align-items: center;
+  background: var(--cream);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1728px;
+  padding: 40px clamp(24px, 6.95vw, 120px);
+  width: 100%;
+}
+
+.brand {
+  color: var(--accent-text);
+  font-family: "Short Stack", Inter, sans-serif;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.main-nav {
+  align-items: center;
+  display: flex;
+  gap: clamp(20px, 3vw, 52px);
+}
+
+.main-nav a {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.main-nav .is-active {
+  color: #000;
+  font-weight: 600;
+}
+
+.contact-button,
+.store-button,
+.secondary-button {
+  align-items: center;
+  background: var(--accent);
+  border: 1.5px solid var(--border);
+  border-radius: 5px;
+  color: var(--border);
+  display: inline-flex;
+  font-size: 17px;
+  font-weight: 500;
+  justify-content: center;
+  min-height: 60px;
+  padding: 12px 24px;
+}
+
+.contact-button {
+  min-height: 48px;
+}
+
+.icon-button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  height: 45px;
+  justify-content: center;
+  padding: 0;
+  width: 45px;
+}
+
+.icon-button img,
+.service-trigger img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-section {
+  align-items: center;
+  display: grid;
+  gap: 60px;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 560px);
+  margin: 0 auto;
+  max-width: 1728px;
+  min-height: 688px;
+  padding: 110px clamp(24px, 6.95vw, 120px) 124px;
+  width: 100%;
+}
+
+.hero-copy h1 {
+  color: var(--ink);
+  font-size: clamp(44px, 4.05vw, 70px);
+  font-weight: 800;
+  line-height: 1.14;
+  margin: 0;
+}
+
+.hero-copy p {
+  color: rgba(31, 31, 57, 0.7);
+  font-size: clamp(20px, 1.62vw, 28px);
+  font-weight: 700;
+  line-height: 1.72;
+  margin: 25px 0 50px;
+}
+
+.store-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.store-button {
+  gap: 10px;
+}
+
+.store-button img {
+  display: block;
+  height: 24px;
+  object-fit: contain;
+  width: 24px;
+}
+
+.store-button:first-child img {
+  width: 20px;
+}
+
+.hero-art {
+  display: grid;
+  justify-items: center;
+  position: relative;
+}
+
+.check-mark {
+  height: auto;
+  margin-bottom: 16px;
+  width: min(157px, 30vw);
+}
+
+.cat-group {
+  aspect-ratio: 1.45;
+  position: relative;
+  width: min(100%, 520px);
+}
+
+.cat,
+.bread {
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  user-select: none;
+}
+
+.cat-left {
+  left: 0;
+  top: 12%;
+  width: 47%;
+}
+
+.cat-back {
+  right: 0;
+  top: 0;
+  width: 49%;
+}
+
+.cat-front {
+  bottom: 0;
+  left: 37%;
+  width: 49%;
+  z-index: 2;
+}
+
+.bread {
+  bottom: -1%;
+  left: 37%;
+  width: 49%;
+  z-index: 3;
+}
+
+.wavy-divider {
+  background-image: url("./assets/divider-wavy.svg");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: auto 6px;
+  height: 6px;
+  width: 100%;
+}
+
+.services-section,
+.contact-section {
+  display: grid;
+  gap: 29px;
+  grid-template-columns: 200px minmax(0, 1fr);
+  margin: 0 auto;
+  max-width: none;
+  padding: 200px clamp(24px, 6.95vw, 120px);
+  width: 100%;
+}
+
+.services-section {
+  background: var(--pink-soft);
+}
+
+.section-kicker {
+  color: #000;
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 20px 0 0;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.service-item {
+  border-bottom: 1px solid rgba(28, 28, 28, 0.55);
+}
+
+.service-item:first-child {
+  border-top: 0;
+}
+
+.service-trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  min-height: 84px;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.service-trigger span {
+  color: #000;
+  font-size: clamp(30px, 2.31vw, 40px);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.service-trigger img {
+  flex: 0 0 auto;
+  height: 41px;
+  transition: transform 180ms ease;
+  width: 41px;
+}
+
+.service-item:not(.is-open) .service-trigger img {
+  transform: rotate(180deg);
+}
+
+.service-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 220ms ease;
+}
+
+.service-panel p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: clamp(18px, 1.62vw, 28px);
+  font-weight: 400;
+  line-height: 1.72;
+  margin: 0;
+  overflow: hidden;
+}
+
+.service-item.is-open .service-panel {
+  grid-template-rows: 1fr;
+}
+
+.service-item.is-open .service-panel p {
+  padding-bottom: 25px;
+}
+
+.contact-section {
+  align-items: center;
+  background: var(--pink);
+}
+
+.contact-copy {
+  max-width: 1019px;
+}
+
+.contact-copy h2 {
+  color: var(--border);
+  font-size: clamp(30px, 2.31vw, 40px);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 55px;
+}
+
+.secondary-button {
+  background: #fddde7;
+  min-height: 48px;
+  min-width: 194px;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding-block: 28px;
+  }
+
+  .main-nav a:not(.contact-button) {
+    display: none;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding-bottom: 80px;
+    padding-top: 64px;
+  }
+
+  .hero-art {
+    order: -1;
+  }
+
+  .cat-group {
+    max-width: 440px;
+  }
+
+  .services-section,
+  .contact-section {
+    gap: 36px;
+    grid-template-columns: 1fr;
+    padding-bottom: 96px;
+    padding-top: 96px;
+  }
+
+  .section-kicker {
+    margin: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand {
+    font-size: 24px;
+  }
+
+  .contact-button {
+    display: none;
+  }
+
+  .hero-section {
+    gap: 42px;
+  }
+
+  .hero-copy h1 {
+    font-size: 40px;
+  }
+
+  .store-actions,
+  .store-button {
+    width: 100%;
+  }
+
+  .service-trigger {
+    min-height: 74px;
+  }
+
+  .service-trigger span {
+    font-size: 28px;
+  }
+}
