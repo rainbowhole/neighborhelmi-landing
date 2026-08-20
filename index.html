@@ -24,112 +24,160 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
   <header class="site-header">
     <div class="nav-shell">
-      <a class="brand" href="#home" aria-label="Neighborhelmi home">
-        <img src="./assets/neighborhelmi/favicon-dark.png" alt="" />
-        <span>Neighborhelmi</span>
-      </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About us</a>
-        <a href="#contact">Contact us</a>
+        <a href="#home" data-route-link="home">Home</a>
+        <a href="#about" data-route-link="about">About us</a>
       </nav>
+      <a class="nav-cta" href="#contact" data-route-link="contact">Contact us</a>
     </div>
   </header>
 
-  <main id="home">
-    <section class="hero-frame section-frame">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <p class="eyebrow">Neighborhelmi</p>
-        <h1>Scale your enterprise with Agentic Intelligence</h1>
-        <p class="hero-description">
-          Neighborhelmi is a company dedicated to enriching everyday life through app
-          development and content creation.
-        </p>
-      </div>
-    </section>
+  <main>
+    <section class="page-view is-active" id="page-home" data-page="home">
+      <section class="hero-frame section-frame">
+        <div class="grain-bg" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <h1>Neighborhelmi</h1>
+          <p>
+            Neighborhelmi is a company dedicated to enriching everyday life
+            through app development and content creation.
+          </p>
+          <a class="button" href="#contact" data-route-link="contact">Contact us</a>
+        </div>
+      </section>
 
-    <section class="intro-frame section-frame" id="about">
-      <div class="section-heading">
-        <p class="eyebrow">About us</p>
-        <h2>Neighborhelmi</h2>
-      </div>
-      <p class="intro-text">
-        Neighborhelmi is a company dedicated to enriching everyday life through app
-        development and content creation.
-      </p>
-    </section>
+      <section class="business-frame section-frame">
+        <div class="grain-bg" aria-hidden="true"></div>
+        <div class="business-inner">
+          <h2>Core Business Areas</h2>
+          <article>
+            <h3>App Development</h3>
+            <ul>
+              <li>Mobile &amp; web app planning and development with a user-first approach</li>
+              <li>iOS / Android / cross-platform support</li>
+              <li>From MVP to full-scale product — turning ideas into reality</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Content Creation</h3>
+            <ul>
+              <li>Brand storytelling and video content production</li>
+              <li>SNS channel management and content strategy</li>
+              <li>Advertising creative · short-form · documentary and more</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-    <section class="business-frame section-frame">
-      <div class="section-heading">
-        <p class="eyebrow">Core Business Areas</p>
-        <h2>App Development<br />Content Creation</h2>
-      </div>
-      <div class="business-grid" aria-label="Core business areas">
-        <article>
-          <h3>App Development</h3>
-          <p>Mobile &amp; web app planning and development with a user-first approach</p>
-          <p>iOS / Android / cross-platform support</p>
-          <p>From MVP to full-scale product — turning ideas into reality</p>
-        </article>
-        <article>
-          <h3>Content Creation</h3>
-          <p>Brand storytelling and video content production</p>
-          <p>SNS channel management and content strategy</p>
-          <p>Advertising creative · short-form · documentary and more</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="project-section" aria-labelledby="projects-title">
-      <div class="project-card">
-        <div class="project-bg" aria-hidden="true"></div>
+      <section class="project-card">
+        <div class="grain-bg" aria-hidden="true"></div>
         <div class="project-topline">
-          <p class="eyebrow" id="projects-title">Apps in Development</p>
-          <p class="eyebrow">Project 01</p>
+          <p>Apps in Development</p>
+          <p>Project 01</p>
         </div>
-        <div class="project-body">
-          <div class="project-copy">
-            <h3>BeLucky</h3>
-            <p>Bringing luck to your everyday — BeLucky adds a little spark of excitement to your day.</p>
-            <a href="https://belucky.framer.website/" target="_blank" rel="noreferrer">Visit BeLucky Landing Page</a>
-          </div>
-          <figure class="project-image project-image-belucky">
-            <img src="./assets/neighborhelmi/belucky.png" alt="BeLucky landing page preview" />
-          </figure>
+        <div class="project-copy">
+          <h3>BeLucky</h3>
+          <p>Bringing luck to your everyday — BeLucky adds a little spark of excitement to your day.</p>
+          <a href="https://belucky.framer.website/" target="_blank" rel="noreferrer">Visit BeLucky Landing Page</a>
         </div>
-      </div>
+        <figure class="project-image project-image-belucky">
+          <img src="./assets/neighborhelmi/belucky.png" alt="BeLucky landing page preview" />
+        </figure>
+      </section>
 
-      <div class="project-card">
-        <div class="project-bg" aria-hidden="true"></div>
+      <section class="project-card">
+        <div class="grain-bg" aria-hidden="true"></div>
         <div class="project-topline">
-          <p class="eyebrow">Apps in Development</p>
-          <p class="eyebrow">Project 02</p>
+          <p>Apps in Development</p>
+          <p>Project 02</p>
         </div>
-        <div class="project-body">
-          <div class="project-copy">
-            <h3>ToDough</h3>
-            <p>Make productivity delicious — ToDough redefines how you get things done.</p>
-            <a href="https://todough-landing.vercel.app/#home" target="_blank" rel="noreferrer">Visit ToDough Landing
-              Page</a>
-          </div>
-          <figure class="project-image">
-            <img src="./assets/neighborhelmi/todough.png" alt="ToDough landing page preview" />
-          </figure>
+        <div class="project-copy">
+          <h3>ToDough</h3>
+          <p>Make productivity delicious — ToDough redefines how you get things done.</p>
+          <a href="https://todough-landing.vercel.app/#home" target="_blank" rel="noreferrer">Visit ToDough Landing
+            Page</a>
         </div>
-      </div>
+        <figure class="project-image project-image-todough">
+          <img src="./assets/neighborhelmi/todough.png" alt="ToDough landing page preview" />
+        </figure>
+      </section>
+    </section>
+
+    <section class="page-view" id="page-about" data-page="about">
+      <section class="about-frame section-frame">
+        <div class="grain-bg" aria-hidden="true"></div>
+        <div class="about-copy">
+          <p class="kicker">ABOUT US</p>
+          <h1>The mission behind<br />the intelligence</h1>
+          <p>
+            Neighborhelmi stands on two pillars — <strong>app development</strong>
+            and <strong>content creation</strong> — delivering products and stories
+            that bring real value to people's lives. We thrive at the intersection
+            of technology and creativity.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <section class="page-view" id="page-contact" data-page="contact">
+      <section class="contact-frame section-frame">
+        <div class="grain-bg" aria-hidden="true"></div>
+        <div class="contact-panel">
+          <section class="contact-info">
+            <div>
+              <h1>Have something you'd<br />like to build together?</h1>
+              <p>Reach out anytime. We welcome people with great ideas.</p>
+            </div>
+            <div class="contact-details">
+              <article>
+                <h2>Office</h2>
+                <p>170, Sinjeong-ro, Yangcheon-gu, Seoul, 08587, Republic of Korea</p>
+              </article>
+              <article>
+                <h2>Mail</h2>
+                <p><a href="mailto:piyoticon@gmail.com">piyoticon@gmail.com</a></p>
+              </article>
+            </div>
+          </section>
+
+          <form class="contact-form" action="https://formsubmit.co/piyoticon@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Neighborhelmi contact message" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot" />
+            <label>
+              <span>Your name</span>
+              <input name="name" type="text" required />
+            </label>
+            <label>
+              <span>Phone no</span>
+              <input name="phone" type="tel" />
+            </label>
+            <label>
+              <span>Email address</span>
+              <input name="email" type="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Contact us</button>
+          </form>
+        </div>
+      </section>
     </section>
   </main>
 
-  <footer class="site-footer" id="contact">
+  <footer class="site-footer">
     <div class="footer-inner">
       <p>© 2026. All Rights Reserved</p>
-      <a href="mailto:neighborhelmi@gmail.com">Neighborhelmi</a>
+      <a href="#home" data-route-link="home">Neighborhelmi</a>
     </div>
   </footer>
 </body>
