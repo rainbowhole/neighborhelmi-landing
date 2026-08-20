@@ -36,6 +36,18 @@ img {
   max-width: 100%;
 }
 
+h1,
+h2,
+h3,
+p,
+li,
+a,
+button,
+input,
+textarea {
+  overflow-wrap: anywhere;
+}
+
 button,
 input,
 textarea {
@@ -287,6 +299,7 @@ ul {
 }
 
 .project-image {
+  background: rgba(255, 255, 255, 0.28);
   margin: 0;
   overflow: hidden;
 }
@@ -303,7 +316,7 @@ ul {
 
 .project-image img {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   width: 100%;
 }
@@ -498,6 +511,44 @@ ul {
     padding-right: 24px;
   }
 
+  .hero-frame {
+    height: auto;
+    min-height: 360px;
+    padding: 72px 48px;
+  }
+
+  .hero-copy h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .hero-copy p {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 560px;
+  }
+
+  .business-frame {
+    min-height: auto;
+    padding-bottom: 72px;
+    padding-top: 72px;
+  }
+
+  .business-inner h2 {
+    font-size: 34px;
+    line-height: 46px;
+  }
+
+  .project-card {
+    min-height: auto;
+    padding-bottom: 56px;
+    padding-top: 56px;
+  }
+
+  .project-topline {
+    margin-bottom: 56px;
+  }
+
   .project-image-belucky,
   .project-image-todough {
     height: auto;
@@ -510,6 +561,30 @@ ul {
 
   .project-image-todough {
     aspect-ratio: 944.05 / 547;
+  }
+
+  .about-frame {
+    height: auto;
+    min-height: 620px;
+    padding: 72px 40px;
+  }
+
+  .contact-frame {
+    min-height: auto;
+    padding: 48px 24px;
+  }
+
+  .contact-panel {
+    min-height: 680px;
+  }
+
+  .contact-info h1 {
+    font-size: 34px;
+    line-height: 46px;
+  }
+
+  .contact-details {
+    margin-top: 88px;
   }
 }
 
@@ -539,6 +614,7 @@ ul {
 
   .nav-cta {
     grid-column: 2;
+    font-size: 13px;
     height: 40px;
     margin-right: 16px;
     padding: 0 14px;
@@ -567,6 +643,10 @@ ul {
     padding: 48px 16px;
   }
 
+  .business-inner {
+    gap: 28px;
+  }
+
   .business-inner h2,
   .about-copy h1,
   .contact-info h1 {
@@ -585,7 +665,17 @@ ul {
   }
 
   .project-topline {
+    gap: 16px;
     margin-bottom: 48px;
+  }
+
+  .project-copy {
+    margin-bottom: 28px;
+  }
+
+  .project-image-belucky,
+  .project-image-todough {
+    width: 100%;
   }
 
   .about-frame {
@@ -619,5 +709,140 @@ ul {
 
   .footer-inner {
     height: 128px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    min-height: auto;
+  }
+
+  .nav-shell,
+  .section-frame,
+  .project-card,
+  .footer-inner {
+    max-width: calc(100% - 20px);
+  }
+
+  .nav-shell {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+    padding: 14px;
+  }
+
+  .site-nav {
+    gap: 18px;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .site-nav a {
+    font-size: 13px;
+  }
+
+  .nav-cta {
+    height: 40px;
+    justify-self: auto;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .hero-frame {
+    min-height: 340px;
+    padding: 48px 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .hero-copy p,
+  .about-copy p:last-child {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .button {
+    height: 42px;
+    padding: 0 18px;
+  }
+
+  .business-frame,
+  .project-card,
+  .contact-frame {
+    padding: 38px 14px;
+  }
+
+  .business-inner h2,
+  .about-copy h1,
+  .contact-info h1 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .business-inner h3,
+  .project-copy h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .project-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+
+  .project-copy p,
+  .project-copy a {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .about-frame {
+    min-height: 480px;
+    padding: 48px 18px;
+  }
+
+  .kicker {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .contact-panel {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 36px 16px;
+  }
+
+  .contact-info h1 br {
+    display: none;
+  }
+
+  .contact-details {
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .contact-form {
+    gap: 18px;
+  }
+
+  .contact-form label {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 14px;
+    height: 110px;
   }
 }
