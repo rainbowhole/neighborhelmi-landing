@@ -1,8 +1,8 @@
 {
-  "name": "todough-landing",
+  "name": "neighborhelmi-landing",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "vercel dev"
+    "start": "python3 -m http.server 4174"
   }
 }

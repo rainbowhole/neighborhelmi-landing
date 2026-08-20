@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://rainbowhole.github.io/todough-landing/sitemap.xml
